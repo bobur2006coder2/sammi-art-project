@@ -1,0 +1,356 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:wght@400;500;700&display=swap");
+
+:root {
+  --Playfair: "Playfair Display", serif;
+  --Quicksand: "Quicksand", sans-serif;
+  --Roboto: "Roboto", sans-serif;
+  --dark: #3c393d;
+  --extraDark: #2b2b2b;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--Quicksand);
+  scroll-behavior: smooth;
+}
+body {
+  line-height: 1.4;
+}
+
+img {
+  width: 100%;
+  display: block;
+}
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+  padding: 0px 1.2rem;
+}
+
+/* Header styling start */
+
+header {
+  height: 100vh;
+  background: radial-gradient(
+    circle,
+    rgba(63, 94, 251, 1) 0%,
+    rgba(252, 70, 107, 1) 100%
+  );
+  background-image: url("./img/backgroundHeader.webp");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+.navbar {
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.2rem;
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  width: 100%;
+}
+.navigation {
+  display: flex;
+  justify-content: space-between;
+}
+.navigation .logo a {
+  color: white;
+  font-size: 2rem;
+  display: block;
+  text-decoration: none;
+  font-family: var(--Playfair);
+  letter-spacing: 1px;
+}
+.navbar-nav {
+  padding: 0.8rem 0 0.2rem 0;
+}
+.navbar-nav a {
+  text-transform: uppercase;
+  font-family: var(--Roboto);
+  letter-spacing: 3px;
+  font-weight: 500;
+  color: white;
+  text-decoration: none;
+  padding: 0 1.2rem;
+  transition: all 0.5s ease-in-out;
+}
+.navbar-nav a:hover {
+  /* font-weight: 500; */
+  opacity: 0.5;
+  color: red;
+}
+
+.banner {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+}
+.banner-title {
+  font-size: 5rem;
+  font-family: var(--Playfair);
+}
+.banner-title span {
+  font-family: var(--Playfair);
+  color: var(--extraDark);
+}
+
+.banner p {
+  padding: 1rem 0 2rem;
+  font-size: 1.2rem;
+  text-transform: capitalize;
+  font-family: var(--Roboto);
+  font-weight: 300;
+  word-spacing: 2px;
+}
+.banner form {
+  background: #fff;
+  border-radius: 2rem;
+  padding: 0.6rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  width: 80%;
+  margin: 0px auto;
+}
+
+[searchInput] {
+  width: 100%;
+  /* padding: 100%; */
+  font-family: var(--Roboto);
+  font-size: 1.2rem;
+  padding: 0.6rem 0;
+  outline: none;
+  border: none;
+}
+[searchInput]::placeholder {
+  text-transform: capitalize;
+}
+#search-btn {
+  width: 40px;
+  font-size: 1.2rem;
+  color: var(--dark);
+  border: none;
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+}
+/* end of header styling  */
+/* start of first section styling  */
+.design {
+  padding: 4.5rem 0;
+}
+.title {
+  text-align: center;
+  padding: 1rem 0;
+}
+.title h2 {
+  font-family: var(--Playfair);
+  font-size: 2.4rem;
+}
+
+.design-content {
+  margin: 2rem 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+}
+.design-item {
+  cursor: pointer;
+  margin: 0;
+}
+.design-img {
+  position: relative;
+  overflow: hidden;
+}
+.design-img::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.design-img img {
+  transition: all 0.5s ease;
+}
+.design-img:hover img {
+  transform: scale(1.2);
+}
+
+.design-img span:first-of-type {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: var(--dark);
+  padding: 0.3rem;
+  color: #fff;
+  z-index: 1;
+}
+
+.design-img span:last-of-type {
+  position: absolute;
+  z-index: 1;
+  bottom: 10px;
+  right: 10px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.1rem;
+  text-transform: capitalize;
+}
+
+.design-title {
+  width: 100%;
+  padding: 1rem;
+  font-size: 1.2rem;
+  text-align: center;
+  margin: 0;
+}
+
+.design-title a {
+  text-decoration: none;
+  color: var(--dark);
+  text-transform: capitalize;
+}
+
+/* end of design styling  */
+
+.blog {
+  background: #f9f9f9;
+  padding: 4.5rem;
+}
+
+.blog-content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  margin: 2rem;
+  gap: 2rem;
+}
+.blog-img {
+  position: relative;
+}
+.blog-img > span {
+  position: absolute;
+  top: 230px;
+  right: 10px;
+  background-color: var(--dark);
+  color: white;
+  font-size: 1.4rem;
+  padding: 0.3rem 0.6rem;
+  cursor: pointer;
+}
+.blog-text span {
+  font-weight: 300;
+  display: block;
+  padding-bottom: 0.5rem;
+  padding-top: 0.5rem;
+}
+
+.blog-text h2 {
+  font-family: var(--Playfair);
+  padding: 1rem 0;
+}
+.blog-text p {
+  font-weight: 300;
+  font-size: 1.1rem;
+  padding: 1.3rem 0;
+}
+.blog-text a {
+  font-size: 500;
+  text-transform: capitalize;
+  padding: 1rem;
+  background: var(--dark);
+  margin: 1rem 0;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  color: white;
+  transition: all 0.5s ease-in;
+}
+
+.blog-text a:hover {
+  background-color: var(--extraDark);
+}
+/* End of blog section styling */
+
+/* start of about section styling */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 3rem;
+  align-items: center;
+}
+
+.about-text {
+  margin: 2rem 0;
+}
+.about-text p {
+  font-size: 1.1rem;
+  padding: 0.6rem 0;
+}
+
+.title p {
+  text-transform: uppercase;
+}
+
+/* End of about section styling */
+
+/* start of footer section styling */
+
+footer{
+    background: var(--extraDark);
+    padding: 2rem;
+    text-align: center;
+}
+.social-links>span{
+    display: block;
+    font-family: var(--Playfair);
+    font-weight: 700;
+    color: white;
+}
+.social-links a{
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1.4rem;
+}
+
+/* -------------------- Resposive ------------ */
+.navbar-nav i{
+  display: none;
+  font-size: 1.5rem;
+ }
+
+@media (max-width:800px){
+ .navbar-nav a{
+  display: none;
+ }
+ .navbar-nav i{
+  display: block;
+ }
+ .banner-title{
+  font-size: 2.5rem;
+ }
+ .design-content{
+  grid-template-columns: repeat(2,1fr);
+ }
+ .blog-content{
+  grid-template-columns: 1fr;
+  margin: 1rem;
+  gap: 2rem;
+ }
+ .about-content{
+  grid-template-columns: 1fr ;
+  column-gap: 3rem;
+  align-items: center;
+ }
+ header{
+  height: 50vh;
+ }
+ .blog-img > span {
+  top: 133px;
+  right: 0px;
+ }
+}
